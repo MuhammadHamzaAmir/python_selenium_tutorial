@@ -93,11 +93,22 @@ update_b.click()
 time.sleep(5)
 
 driver.back()
-time.sleep(1)
+time.sleep(2)
 driver.back()
 
-time.sleep(3)
+time.sleep(4.5)
 
+# xpath of dropdown
+xpath_arrow_drop_down_2 = "//*[@id='_next']/div/div[1]/div/div[1]/div/div/div/div/div/div[1]/div"
+# xpath of dropdown_menu
+xpath_signout_down = "//*[@id='_next']/div/div[1]/div/div[1]/div/div/div/div/div/div[2]/ul/li"
 
+arrow_drop_down_2 = driver.find_element_by_xpath(xpath_arrow_drop_down_2)
+arrow_drop_down_2.click()
+time.sleep(2.5)
+
+signOUT_b = driver.find_element_by_xpath(xpath_signout_down)
+signOUT_b.click()
+time.sleep(5)
 
 driver.quit()
