@@ -1,5 +1,5 @@
 from selenium import webdriver
 
+browser = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver.exe")
 
-driver = webdriver.Chrome("C:/Program Files/Google/Chrome/Application/chrome.exe")
-driver.get("https://google.co.in")
+browser.get('https://duckduckgo.com')
