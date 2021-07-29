@@ -93,6 +93,8 @@ update_b.click()
 time.sleep(5)
 
 driver.back()
+time.sleep(1)
+driver.back()
 
 time.sleep(3)
 
