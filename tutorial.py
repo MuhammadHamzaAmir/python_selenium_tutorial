@@ -9,6 +9,7 @@ from selenium.webdriver.common.keys import Keys
 options = Options()
 options.page_load_strategy = 'normal'
 
+
 driver = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver.exe",options=options)
 driver.maximize_window()
 driver.get('https://gelukzaaiers.learnforce.cloud/')
@@ -33,10 +34,10 @@ password_ip = "17againpc"; #default password for all the accounts
 
 email = driver.find_element_by_id("email")
 password = driver.find_element_by_id("password")
-
 email.send_keys(email_ip)
 password.send_keys(password_ip)
 time.sleep(1)
+
 
 print(password.get_attribute('value'), " || ", email.get_property("value"), " ", login_b_happen.text)
 
