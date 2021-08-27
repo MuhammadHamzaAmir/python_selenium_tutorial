@@ -6,8 +6,8 @@ import time
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.common.keys import Keys
 
-email = "intern.alphasquad@gmail.com"
-password = "aqkhan88"
+email = "your gmail"
+password = "gamil password"
 name = "ATESTER"
 
 options = Options()
