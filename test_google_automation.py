@@ -15,9 +15,11 @@ options.page_load_strategy = 'normal'
 options.add_experimental_option("excludeSwitches", ["enable-automation"])
 options.add_experimental_option('useAutomationExtension', False)
 
-
-driver = webdriver.Chrome(
-    executable_path="../chromedriver_win32/chromedriver.exe", options=options)
+#for windows
+# driver = webdriver.Chrome(
+#     executable_path="../chromedriver_win32/chromedriver.exe", options=options)
+#for linux
+driver = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver", options=options)
 driver.maximize_window()
 driver.execute_script("Object.defineProperty(navigator, 'webdriver', {get: () => undefined})")
 driver.execute_cdp_cmd('Network.setUserAgentOverride', {"userAgent": 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.53 Safari/537.36'})

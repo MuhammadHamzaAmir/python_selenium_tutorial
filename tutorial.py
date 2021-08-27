@@ -9,8 +9,11 @@ from selenium.webdriver.common.keys import Keys
 options = Options()
 options.page_load_strategy = 'normal'
 
+#for windows
+#driver = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver.exe",options=options)
+#for linux
+driver = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver",options=options)
 
-driver = webdriver.Chrome(executable_path="../chromedriver_win32/chromedriver.exe",options=options)
 driver.maximize_window()
 driver.get('https://gelukzaaiers.learnforce.cloud/')
 time.sleep(3)
@@ -107,7 +110,6 @@ xpath_signout_down = "//*[@id='_next']/div/div[1]/div/div[1]/div/div/div/div/div
 arrow_drop_down_2 = driver.find_element_by_xpath(xpath_arrow_drop_down_2)
 arrow_drop_down_2.click()
 time.sleep(2.5)
-
 signOUT_b = driver.find_element_by_xpath(xpath_signout_down)
 signOUT_b.click()
 time.sleep(5)
